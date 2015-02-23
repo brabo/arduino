@@ -1,0 +1,13 @@
+# ignore compiled files
+*.elf
+*.o
+*.hex
+*.eep
+*.lst
+*.obj
+*.d
+*.lss
+*.sym
+*.map
+
+
