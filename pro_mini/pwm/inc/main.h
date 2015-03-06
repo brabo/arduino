@@ -24,6 +24,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "uart.h"
+#include "pwm.h"
 
 
 #endif

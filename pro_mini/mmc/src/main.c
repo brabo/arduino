@@ -1,6 +1,6 @@
 #include "main.h"
 
-void main(void)
+int main(void)
 {
 	FILE usartout = FDEV_SETUP_STREAM(uart_sendbyte, NULL, _FDEV_SETUP_WRITE);
 	stdout = &usartout;
@@ -16,11 +16,14 @@ void main(void)
 
 	printf("testing 123\r\n");
 	printf("NaNaNaNaNa WATMAN\r\n");
+
+	init_sd();
 	printf("cmd> ");
 
 	while(1) {
 		printf("NaNaNaNaNa WATMAN\r\n");
-		_delay_ms(100);
+		_delay_ms(1000);
+		init_sd();
 
 /*		cmdchar = uart_getbyte();
 		if( cmdchar == '\r' || cmdchar == '\n' || len >= maxlen ) {
@@ -40,4 +43,5 @@ void main(void)
 			cmd[len++] = cmdchar;
 		} */
 	}
+	return 0;
 }

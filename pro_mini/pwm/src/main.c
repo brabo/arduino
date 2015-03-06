@@ -13,6 +13,9 @@ void main(void)
 	ptr = cmd;
 
 	uart_init();
+	init_timers();
+	init_output();
+	hard_on();
 
 	printf("testing 123\r\n");
 	printf("NaNaNaNaNa WATMAN\r\n");
@@ -20,8 +23,10 @@ void main(void)
 
 	while(1) {
 		printf("NaNaNaNaNa WATMAN\r\n");
-		_delay_ms(100);
-
+		_delay_ms(10);
+		fade_off();
+		_delay_ms(10);
+		fade_on();
 /*		cmdchar = uart_getbyte();
 		if( cmdchar == '\r' || cmdchar == '\n' || len >= maxlen ) {
 			if( len >= maxlen ) {

@@ -1,6 +1,6 @@
 MAIN = main.c
 LOCAL_SOURCE_DIR = ./src/
-LOCAL_SOURCE = uart.c
+LOCAL_SOURCE = uart.c fileio.c mmc.c
 
 ROOT = .
 SRC_DIR = ./src/

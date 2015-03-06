@@ -24,6 +24,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "uart.h"
+#include "fileio.h"
+#include "mmc.h"
 
 
 #endif
